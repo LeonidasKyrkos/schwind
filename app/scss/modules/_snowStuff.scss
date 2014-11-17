@@ -1,0 +1,20 @@
+.fallingFront {
+	background-image: url('/img/snow1.png');
+	background-position: -4500px -4500px;
+	background-size: auto auto;
+	background-repeat: repeat;
+	position: absolute;
+	width: 9999px;
+	height: 9999px;
+	z-index: 6;
+}
+
+.snow {
+	background-image: url('/img/snow1.png');
+	background-size: auto auto;
+	background-repeat: repeat;
+	position: absolute;
+	width: 9999px;
+	height: 9999px;
+	z-index: 4;
+}

@@ -1,0 +1,59 @@
+.fallingFront {
+	@include animation(fallingFront 15s infinite linear);
+}
+
+@include keyframes(fallingFront) {
+	0% {
+		left: -2500px;
+		top: -2500px;
+	}
+	100% {
+		left: -1750px;
+		top: -1500px;
+	}
+}
+
+.fallingSlow {
+	@include animation(fallingSlow 15s infinite linear);
+}
+
+@include keyframes(fallingSlow) {
+	0% {
+		left: -4000px;
+		top: -4000px;
+	}
+	100% {
+		left: -3000px;
+		top: -3500px;
+	}
+}
+
+.fallingMedium {
+	@include animation(fallingMedium 15s infinite linear);
+}
+
+@include keyframes(fallingMedium) {
+	0% {
+		left: -4250px;
+		top: -4500px;
+	}
+	100% {
+		left: -3500px;
+		top: -3500px;
+	}
+}
+
+.fallingFast {
+	@include animation(fallingSlow 15s infinite linear);
+}
+
+@include keyframes(fallingFast) {
+	0% {
+		left: -5000px;
+		top: -5000px;
+	}
+	100% {
+		left: -3500px;
+		top: -3000px;
+	}
+}
