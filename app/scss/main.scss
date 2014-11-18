@@ -3,14 +3,20 @@
 @import 'utils/variables';
 @import 'modules/snowStuff';
 @import 'animations/animations';
+@import 'utils/mixins';
+
+*{
+	@include box-sizing(border-box); // IE8 Compatabile (doesnt work with max-width,min width however careful)
+}
 
 html {
+	font-size: 62.5%;
 	width: 100%;
 	height: 100%;
 }
 
 body{
-	background-image: url('/img/optimised/winter-mountain_473.jpg');
+	background-image: url('../../img/optimised/winter-mountain_473.jpg');
 	background-position: 0 0;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -18,25 +24,53 @@ body{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	@include font-size($baseFontSize);
+	font-family: $baseFontFamily;
+	line-height: ($baseLineHeight/$baseFontSize);
+	font-weight: $baseFontWeight;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	color: $white;
 }
 
 .skiPerson {
-	width: 508px;
-	height: 434px;
+	height: em(434);
+	width: em(508);
 	position: absolute;
 	left: 10%;
 	bottom: 0;
-	background-image: url('/img/skier3.png');
+	background-image: url('../../img/skier3.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: block;
 	z-index: 5;
 }
 
-.contentWrap {
+.main {
+	&__content {
+		width: em(600);
+		min-height: em(500);
+		background-color: rgba(0,0,0,0.5);
+		position: absolute;
+		right: 5%;
+		top: 10%;
+		z-index: 6;
+	}
+	&__copy-wrap {
+		color: $white;
+		padding: em(25) em(50) em(25);
+	}
+	&__copy-text {
 
+	}
 }
 
-.pageWrap {
+h1 {
+	font-family: $secondaryFontFamily;
+	font-size: em(38);
+	padding-bottom: em(40,38);
+}
 
+p {
+	padding-bottom: em(10);
 }

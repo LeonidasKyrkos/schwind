@@ -4,12 +4,10 @@
 
 @include keyframes(fallingFront) {
 	0% {
-		left: -2500px;
-		top: -2500px;
+		@include transform(translateY(-5500px)translateX(-5500px));
 	}
 	100% {
-		left: -1750px;
-		top: -1500px;
+		@include transform(translateY(-4350px)translateX(-4500px));
 	}
 }
 
@@ -19,12 +17,10 @@
 
 @include keyframes(fallingSlow) {
 	0% {
-		left: -4000px;
-		top: -4000px;
+		@include transform(translateY(-5500px)translateX(-5750px));
 	}
 	100% {
-		left: -3000px;
-		top: -3500px;
+		@include transform(translateY(-4500px)translateX(-5250px));
 	}
 }
 
@@ -34,26 +30,22 @@
 
 @include keyframes(fallingMedium) {
 	0% {
-		left: -4250px;
-		top: -4500px;
+		@include transform(translateY(-5500px)translateX(-5250px));
 	}
 	100% {
-		left: -3500px;
-		top: -3500px;
+		@include transform(translateY(-4750px)translateX(-4250px));
 	}
 }
 
 .fallingFast {
-	@include animation(fallingSlow 15s infinite linear);
+	@include animation(fallingFast 15s infinite linear);
 }
 
 @include keyframes(fallingFast) {
 	0% {
-		left: -5000px;
-		top: -5000px;
+		@include transform(translateY(-5000px)translateX(-5000px));
 	}
 	100% {
-		left: -3500px;
-		top: -3000px;
+		@include transform(translateY(-3500px)translateX(-3000px));
 	}
 }
